@@ -29,5 +29,5 @@ And then Shut down the system and go to the boot menu options and then select th
 ![Coustomized Installation](/pictures/coustomised.png)
 ![tick the downloads checkbox](/pictures/3rd.png)
 
-> You can watch my youtube video on how to delete it too
-![How to Delete Ubuntu from Dual Boot(Windows || Ubuntu)](https://www.youtube.com/watch?v=7VFDV7A9SK8&t=47s)
+> You can watch my youtube video on how to delete it too 
+[How to Delete Ubuntu from Dual Boot(Windows || Ubuntu)](https://www.youtube.com/watch?v=7VFDV7A9SK8&t=47s)
