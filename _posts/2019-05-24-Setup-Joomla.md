@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Installing Ubuntu
+title: Setup Joomla - Localhost
 ---
 
-# How to set up localhost for Joomla
+
 
 ### Setting up a lamp server for PHP development
 
