@@ -1,11 +1,18 @@
 ---
+bg: "tools.jpg"
 layout: post
-title: Journey to DL
+title:  "Journey to Deep learning"
+crawlertitle: "Deep Learning"
+summary: "How did I start with deep learning"
+date:   2020-05-29 20:09:47 +0700
+categories: posts
+tags: ['Deep learning']
+author: puneethchanda
 ---
+Logistic Regression is a special case of a Neural Network with no hidden layers, that uses the sigmoid activation function and uses the softmax with cross entropy loss.
+[more](/posts/Journey%20to%20DL/ "read more")
 
 ## What is the difference between neural network and logistic regression?
-
-Logistic Regression is a special case of a Neural Network with no hidden layers, that uses the sigmoid activation function and uses the softmax with cross entropy loss.
 
 Note that a logistic regression is a generalized linear model. In otherwords, the output y is related to the inputs through a ‘link function’ - namely the sigmoid function of a linear combination of the features. Hence, logistic regression cannot capture a more complex non-linear relationship w.r.t the features.
 

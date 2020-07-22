@@ -1,13 +1,17 @@
 ---
+bg: "tools.jpg"
 layout: post
-title: Setup Joomla - Localhost
+title:  "Setup Joomla"
+crawlertitle: "Setup JJoomla"
+summary: "How to set a local Host for Joomla"
+date:   2019-05-24 20:09:47 +0700
+categories: posts
+tags: ['opensource']
+author: puneethchanda
 ---
-
-
+Installing Joomla on your localhost is not quite easy but if you know how to google effectively about your errors after reading their documentation its quite easy.
 
 ### Setting up a lamp server for PHP development
-
-Installing Joomla on your localhost is not quite easy but if you know how to google effectively about your errors after reading their documentation its quite easy.
 
 You need a stable internet connection for doing this. First check if the following packages are installed by using:
 
