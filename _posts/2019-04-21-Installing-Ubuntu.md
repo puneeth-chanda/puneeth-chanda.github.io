@@ -35,9 +35,9 @@ And then Shut down the system and go to the boot menu options and then select th
 - give half the remaining space to the swap area.
 - remaining half to home.
 
-![partitions](assets/images/partitions.png)
-![Coustomized Installation](/pictures/coustomised.png)
-![tick the downloads checkbox](/pictures/3rd.png)
+![partitions](/assets/images/partitions.png)
+![Coustomized Installation](/assets/images/coustomised.png)
+![tick the downloads checkbox](/assets/images/3rd.png)
 
 > You can watch my youtube video on how to delete it too 
 [How to Delete Ubuntu from Dual Boot(Windows || Ubuntu)](https://www.youtube.com/watch?v=7VFDV7A9SK8&t=47s)

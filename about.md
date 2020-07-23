@@ -1,10 +1,10 @@
 ---
 bg: "owl.jpg"
 layout: page
-title: "About"
-crawlertitle: "Why and how this blog was created"
+title: "About Me"
+crawlertitle: "What's all this"
 permalink: /about/
-summary: "About this blog"
+summary: "know about me here"
 active: about
 ---
 
