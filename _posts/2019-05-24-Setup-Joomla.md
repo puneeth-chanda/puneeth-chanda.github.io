@@ -11,7 +11,6 @@ author: puneethchanda
 ---
 
 Installing Joomla on your localhost is not quite easy but if you know how to google effectively about your errors after reading their documentation its quite easy. 
-[<span style="color:blue">  ..more</span>](/posts/Setup-Joomla/ "read more")
 
 ### Setting up a lamp server for PHP development
 
