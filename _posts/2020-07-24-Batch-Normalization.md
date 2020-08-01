@@ -1,5 +1,5 @@
 ---
-bg: "tools.jpg"
+bg: "deep.jpg"
 layout: post
 title:  "Batch Normalization"
 crawlertitle: "Batch Normalization"
