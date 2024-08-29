@@ -6,13 +6,12 @@
           <h1 class="line-after">About Me</h1>
           <h4 class="mt-4">Hey 👋</h4>
           <p>
-            My name is Puneeth Chanda, I am a <b>front-end developer</b> and
-            <b>technical writer</b>. Currently studying Computer Science at
-            <u>OAUSTECH</u>.
+            My name is Puneeth Chanda, I am a <b>developer</b>. Currently working at
+            <u>Chargebee</u>.
           </p>
           <p>
             I have <b>{{ currYear - startYear }}+ years experience</b> in
-            crafting beautiful web and mobile interfaces. Plus I am an agile
+            crafting projects   that makes peoples lives easier. Plus I am an agile
             learner, I learn new cool stuffs everyday.
           </p>
           <h4 class="mt-5">Tech Stacks</h4>
@@ -20,16 +19,16 @@
           <div class="row animate__animated animate__fadeInUp">
             <div class="col">
               <ul style="list-style-type: circle;">
-                <li>HTML & CSS</li>
+                <li>Java</li>
                 <li>Node.js</li>
-                <li>PHP</li>
+                <li>Python</li>
               </ul>
             </div>
             <div class="col">
               <ul style="list-style-type: circle;">
                 <li>JavaScript</li>
                 <li>Vue.js</li>
-                <li>WordPress</li>
+                <li>AWS</li>
               </ul>
             </div>
           </div>
@@ -49,7 +48,7 @@
 export default {
   data() {
     return {
-      startYear: 2017,
+      startYear: 2022,
       currYear: new Date().getFullYear(),
       stacks: [
         {
@@ -92,7 +91,7 @@ export default {
         hid: "description",
         name: "description",
         // currYear - startYear
-        content: `Hey there 👋 My name is Puneeth Chanda, i am a front-end developer and technical writer currently studying Computer Science at OAUSTECH(Nigeria). i have many years of experience in crafting beautiful web and mobile interfaces. Plus i am an agile learner, i learn new cool stuffs everyday.`
+        content: `Hey there 👋 My name is Puneeth Chanda, i am a developer at Chargebee. i have many years of experience in crafting beautiful web and mobile interfaces. Plus i am an agile learner, i learn new cool stuffs everyday.`
       }
     ]
   }
