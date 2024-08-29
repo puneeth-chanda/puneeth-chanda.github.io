@@ -1,73 +1,42 @@
-## Voyager
+# Personal Portfolio 👨🏿‍💻
 
-Just another jekyll theme. Demo: <http://redvi.github.io/voyager>
+> Check it out [here](https://asaolu.netlify.app)
 
-### Feathures:
+### Light-House Report ⚡️
 
-All HTML files are compressed (see `_layouts/compress.html`).
+![Light House Report](https://raw.githubusercontent.com/AsaoluElijah/portfolio/master/light-house-report.png)
 
-**Post**
+### Technologies + Tools used 
 
-All post settings can be changed. Example:
+- [NuxtJs](https://nuxtjs.org/)
+- [Bootstrap-vue](https://bootstrap-vue.org/)
+- [Vue-ionicons](https://github.com/mazipan/vue-ionicons)
+- [Animate.css](https://animate.style/)
 
+![Built With NuxtJs](https://d33wubrfki0l68.cloudfront.net/932e75305b64df2a3226eb7307dcdc9e771448d8/37936/logos/built-with-nuxt.svg)
+
+### Build Setup
+
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
 ```
----
-layout: post
-bg: '2016/background.jpg'
-title: "Post Heading"
-crawlertitle: "page title"
-summary: "post description"
-date: 2016-06-29
-tags : ['front-end']
-slug: post-url
-author: "Author"
-categories: posts
----
-```
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-`bg` is a path to background of your article. By default backgrounds are placed in the `assets/images` directory.
+### Lincense
 
-**Page**
+[MIT LICENSE](license.md)
 
-If page contains `active` tag, it will be show on site menu.
+### Author
 
-```
----
-layout: page
-title: "About"
-permalink: /about/
-active: about
----
-```
-
-**Archive**
-
-Archive page is sorting posts by tags. No more than one tag in one post.
-
-Good:
-
-```
-tags : ['front-end']
-```
-
-Bad:
-
-```
-tags : ['front-end', 'jekyll']
-```
-
-Don't forget to change `_config.yml`.
-
-**Relative paths**
-
-If your blog is not in the root directory, you can include images with a relative path. For example:
-
-```
-![my_image]({{ site.images | relative_url }}/image.jpg)
-```
-
-## Production environment
-
-Build for production:
-
-`JEKYLL_ENV=production jekyll build`
+Made with ❤ and ☕️ by [Puneeth Chanda](https://twitter.com/asaolu_elijah)
