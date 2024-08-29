@@ -13,7 +13,7 @@
         <b-nav-item to="/">Home</b-nav-item>
         <b-nav-item to="/about">About</b-nav-item>
         <b-nav-item to="/projects">Projects</b-nav-item>
-        <b-nav-item to="/articles">Articles</b-nav-item>
+        <!-- <b-nav-item to="/articles">Articles</b-nav-item> -->
         <b-nav-item to="/contact">Contact Me</b-nav-item>
         <b-nav-item
           href="#"
