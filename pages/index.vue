@@ -19,7 +19,6 @@
       <div class="col-md-10 info">
         A <b>Software developer</b> passionate
         about solving real-life problems with tech.<br />
-        Currently i'm exploring the cloud ecosystem.
         <br />
         <b-button
           class="action-btn animate__animated animate__wobble animate__delay-4s animate__fast"
