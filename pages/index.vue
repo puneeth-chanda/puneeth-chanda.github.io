@@ -97,7 +97,7 @@ export default {
   },
 
   head: {
-    title: "Portfolio ⚡ - Puneeth Chanda",
+    title: "Puneeth Chanda",
     meta: [
       {
         hid: "description",
@@ -108,7 +108,7 @@ export default {
       {
         hid: "og:title",
         name: "og:title",
-        content: "Portfolio ⚡ - Puneeth Chanda"
+        content: "Puneeth Chanda"
       },
       {
         property: "og:description",
