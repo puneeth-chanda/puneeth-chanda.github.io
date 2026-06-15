@@ -26,39 +26,58 @@ export default function ResumePage() {
           </p>
           <h1>Resume</h1>
           <p style={{ color: "var(--color-text-muted)", marginTop: "var(--space-sm)" }}>
-            Professional background and experience.
+            Software Engineer with 3+ years building scalable SaaS products, distributed systems, and AI-powered workflows.
           </p>
         </div>
 
-        {/* Experience */}
+        {/* Software Engineer — Chargebee */}
         <div className="card" style={{ padding: "var(--space-xl)", marginBottom: "var(--space-lg)" }}>
-          <h2 style={{ fontSize: "1.1rem", marginBottom: "var(--space-lg)" }}>Experience</h2>
-
-          <div style={{ marginBottom: "var(--space-lg)" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "var(--space-sm)" }}>
-              <h3 style={{ fontSize: "1rem", marginBottom: 0 }}>Chargebee</h3>
-              <span className="text-mono" style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
-                2022 — Present
-              </span>
-            </div>
-            <p className="text-mono" style={{ fontSize: "0.75rem", color: "var(--color-signal)", marginBottom: "var(--space-sm)" }}>
-              Software Engineer
-            </p>
-            <ul style={{ paddingLeft: "1.2rem", marginTop: "var(--space-sm)" }}>
-              <li>Building AI-powered onboarding agent tools and sandboxing platforms</li>
-              <li>Developing performance testing frameworks and CI/CD automation</li>
-              <li>Implementing OAuth-based email integrations and intelligent automation solutions</li>
-            </ul>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "var(--space-sm)" }}>
+            <h2 style={{ fontSize: "1.1rem", marginBottom: 0 }}>Chargebee</h2>
+            <span className="text-mono" style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
+              Nov 2024 — Present
+            </span>
           </div>
+          <p className="text-mono" style={{ fontSize: "0.75rem", color: "var(--color-signal)", marginBottom: "var(--space-md)" }}>
+            Software Engineer
+          </p>
+          <ul style={{ paddingLeft: "1.2rem" }}>
+            <li style={{ marginBottom: "var(--space-sm)" }}>Built an onboarding agent that maps a user&apos;s pricing structure into Chargebee, cutting onboarding friction time by 80%.</li>
+            <li style={{ marginBottom: "var(--space-sm)" }}>Developed MCP-based tooling enabling AI agents to perform self-service customer configuration workflows, reducing support dependency by 50%.</li>
+            <li style={{ marginBottom: "var(--space-sm)" }}>Led migration of a legacy configuration platform to a unified framework supporting audits, criteria evaluation, and resolver chains with zero data discrepancies.</li>
+            <li style={{ marginBottom: "var(--space-sm)" }}>Led full lifecycle development of an on-demand sandboxing platform, servicing 500+ unique users monthly.</li>
+            <li>Built a dynamic blacklist feature for regulated email delivery, supporting jurisdiction-specific requirements and reducing policy breaches.</li>
+          </ul>
+        </div>
+
+        {/* SDET — Chargebee */}
+        <div className="card" style={{ padding: "var(--space-xl)", marginBottom: "var(--space-lg)" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "var(--space-sm)" }}>
+            <h2 style={{ fontSize: "1.1rem", marginBottom: 0 }}>Chargebee</h2>
+            <span className="text-mono" style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
+              Aug 2022 — Oct 2024
+            </span>
+          </div>
+          <p className="text-mono" style={{ fontSize: "0.75rem", color: "var(--color-signal)", marginBottom: "var(--space-md)" }}>
+            SDET
+          </p>
+          <ul style={{ paddingLeft: "1.2rem" }}>
+            <li style={{ marginBottom: "var(--space-sm)" }}>Pioneered automated performance testing framework using AWS Lambda, Python, and Vue.js, lowering manual QA effort by 75% and cutting test cycle times by 40%.</li>
+            <li style={{ marginBottom: "var(--space-sm)" }}>Integrated automated performance validation into CI/CD pipelines, raising release velocity from monthly to biweekly cycles.</li>
+            <li>Orchestrated on-demand, data-driven performance dashboards, accelerating debugging and incident response by 60%.</li>
+          </ul>
         </div>
 
         {/* Education */}
         <div className="card" style={{ padding: "var(--space-xl)", marginBottom: "var(--space-lg)" }}>
-          <h2 style={{ fontSize: "1.1rem", marginBottom: "var(--space-lg)" }}>Education</h2>
+          <h2 style={{ fontSize: "1.1rem", marginBottom: "var(--space-md)" }}>Education</h2>
           <div>
-            <h3 style={{ fontSize: "1rem", marginBottom: "var(--space-xs)" }}>Bachelor of Technology</h3>
+            <h3 style={{ fontSize: "1rem", marginBottom: "var(--space-xs)" }}>B.Tech Computer Science Engineering</h3>
+            <p style={{ color: "var(--color-text-muted)", fontSize: "0.9rem", marginBottom: "var(--space-xs)" }}>
+              Amrita School of Engineering, Amritapuri, Kerala
+            </p>
             <span className="text-mono" style={{ fontSize: "0.75rem", color: "var(--color-text-muted)" }}>
-              Engineering | 2018 — 2022
+              2018 — 2022 · CGPA 8.63/10
             </span>
           </div>
         </div>
@@ -70,31 +89,47 @@ export default function ResumePage() {
             <div>
               <div className="skill-category">Languages</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
-                {["Java", "Python", "TypeScript", "SQL"].map((s) => (
+                {["Java", "Python", "TypeScript", "SQL", "Bash"].map((s) => (
                   <span className="skill-tag" key={s}>{s}</span>
                 ))}
               </div>
             </div>
             <div>
-              <div className="skill-category">Backend</div>
+              <div className="skill-category">Frameworks</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
-                {["Spring Boot", "Node.js", "Vue.js", "AWS"].map((s) => (
+                {["Spring Boot", "JPA", "Hibernate", "Vue.js", "REST APIs", "Microservices"].map((s) => (
                   <span className="skill-tag" key={s}>{s}</span>
                 ))}
               </div>
             </div>
             <div>
-              <div className="skill-category">DevOps</div>
+              <div className="skill-category">AI / ML</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
-                {["Kubernetes", "Docker", "CI/CD", "ELK"].map((s) => (
+                {["LLM Integration", "OpenAI API", "AI Agents", "RAG", "Prompt Engineering"].map((s) => (
                   <span className="skill-tag" key={s}>{s}</span>
                 ))}
               </div>
             </div>
             <div>
-              <div className="skill-category">AI/LLM</div>
+              <div className="skill-category">Cloud & DevOps</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
-                {["[PLACEHOLDER: tools]"].map((s) => (
+                {["AWS (ECS, Lambda, S3, RDS)", "Docker", "Kubernetes", "Terraform", "GitHub Actions"].map((s) => (
+                  <span className="skill-tag" key={s}>{s}</span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="skill-category">Databases</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
+                {["MySQL", "PostgreSQL", "Redis"].map((s) => (
+                  <span className="skill-tag" key={s}>{s}</span>
+                ))}
+              </div>
+            </div>
+            <div>
+              <div className="skill-category">Observability</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
+                {["ELK Stack", "Splunk", "Grafana"].map((s) => (
                   <span className="skill-tag" key={s}>{s}</span>
                 ))}
               </div>
@@ -105,20 +140,20 @@ export default function ResumePage() {
         {/* Download */}
         <div style={{ textAlign: "center", marginTop: "var(--space-2xl)" }}>
           <a
-            href="/assets/resume.pdf"
+            href="/resume.pdf"
             download
             className="btn btn-primary"
             onClick={(e) => {
               if (!document.getElementById("resume-pdf")) {
                 e.preventDefault()
-                alert("Resume PDF not found. Please add it to public/assets/resume.pdf")
+                alert("Resume PDF not found. Please add it to public/resume.pdf")
               }
             }}
           >
             Download PDF
           </a>
           <p className="text-mono" style={{ fontSize: "0.7rem", color: "var(--color-text-muted)", marginTop: "var(--space-sm)" }}>
-            public/assets/resume.pdf
+            public/resume.pdf
           </p>
         </div>
       </div>

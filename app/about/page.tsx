@@ -9,31 +9,31 @@ export const metadata: Metadata = {
 const skillCategories = [
   {
     name: "Languages",
-    skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
+    skills: ["Java", "Python", "TypeScript", "SQL", "Bash"],
   },
   {
     name: "Backend & Frameworks",
-    skills: ["Spring Boot", "Node.js", "Vue.js", "AWS Lambda", "AWS S3"],
+    skills: ["Spring Boot", "Spring Framework", "JPA", "Hibernate", "Vue.js", "REST APIs", "Microservices"],
+  },
+  {
+    name: "AI/ML & Agent Tooling",
+    skills: ["LLM Integration", "OpenAI API", "AI Agents", "RAG", "Prompt Engineering"],
   },
   {
     name: "Cloud & DevOps",
-    skills: ["Kubernetes", "Docker", "CI/CD", "ELK Stack", "Splunk"],
+    skills: ["AWS (ECS, Lambda, S3, RDS, CloudWatch)", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
   },
   {
-    name: "AI/LLM & Agent Tooling",
-    skills: ["[PLACEHOLDER: LangChain, OpenAI/Anthropic APIs, vector DBs]", "GenAI Agents", "NLP", "Automation"],
+    name: "Databases",
+    skills: ["MySQL", "PostgreSQL", "Redis"],
   },
   {
-    name: "Databases & Observability",
-    skills: ["MySQL", "PostgreSQL", "Redis", "Monitoring", "Logging"],
+    name: "Observability",
+    skills: ["ELK Stack", "Splunk", "Grafana"],
   },
 ]
 
 export default function AboutPage() {
-  const startYear = 2022
-  const currYear = new Date().getFullYear()
-  const experience = currYear - startYear
-
   return (
     <div className="page">
       <div className="page-container">
@@ -64,21 +64,26 @@ export default function AboutPage() {
           {/* Left: Bio */}
           <div>
             <p style={{ fontSize: "1.1rem", marginBottom: "var(--space-lg)" }}>
-              I&apos;m Puneeth Chanda, a Software Engineer at Chargebee building
-              AI-powered onboarding agent tools, sandboxing platforms, and
-              OAuth-based integrations.
+              Software Engineer with 3+ years of experience building scalable
+              SaaS products, distributed systems, AI-powered workflows,
+              cloud-native platforms, and developer tooling.
             </p>
             <p style={{ marginBottom: "var(--space-lg)" }}>
-              With <strong>{experience}+ years of experience</strong>, I focus
-              on developing performance testing frameworks, CI/CD automation,
-              and GenAI/LLM-powered applications. I&apos;m passionate about
-              creating tools that make complex systems more accessible and
-              efficient.
+              Currently at <strong>Chargebee</strong>, where I build
+              AI-powered onboarding agents, MCP-based tooling for
+              self-service configuration, and sandboxing platforms servicing
+              500+ users monthly.
+            </p>
+            <p style={{ marginBottom: "var(--space-lg)" }}>
+              Previously an <strong>SDET</strong> at Chargebee, where I
+              pioneered automated performance testing frameworks that cut
+              manual QA effort by 75% and accelerated release cycles from
+              monthly to biweekly.
             </p>
             <p style={{ marginBottom: "var(--space-xl)" }}>
-              My work sits at the intersection of developer tooling and
-              intelligent automation — building the systems that help other
-              engineers ship faster and with more confidence.
+              I own products end-to-end — from architecture and implementation
+              to deployment and monitoring. My focus is on building tools that
+              make engineering teams faster and more effective.
             </p>
             <Link href="/resume" className="btn btn-primary">
               View Full Resume

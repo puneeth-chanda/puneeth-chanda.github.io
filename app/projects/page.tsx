@@ -5,48 +5,75 @@ export const metadata: Metadata = {
   description: "View Puneeth Chanda's projects including AI/GenAI agents, developer tools, and automation platforms.",
 }
 
-const aiProjects = [
+const featuredProjects = [
   {
-    title: "[PLACEHOLDER: AI Agent for Code Review]",
-    problem: "Automate code quality analysis and provide intelligent feedback",
-    tech: ["[PLACEHOLDER: Python]", "[PLACEHOLDER: OpenAI/Anthropic APIs]", "[PLACEHOLDER: LangChain]"],
-    outcome: "Reduce manual review time by 70% and improve code consistency",
-    link: "[PLACEHOLDER: add GitHub repo link]",
+    title: "Klaro",
+    description: "AI-powered educational platform that analyzes incorrect student responses, identifies underlying conceptual gaps, and generates personalized learning paths.",
+    highlights: [
+      "Built concept dependency graph for prerequisite analysis and root-cause identification of learning deficiencies",
+      "Integrated LLM-based feedback generation, adaptive assessments, and mastery tracking",
+      "Delivers personalized remediation paths based on individual learning patterns",
+    ],
+    tech: ["AI/ML", "LLM Integration", "Adaptive Assessments"],
+    link: "[PLACEHOLDER: add GitHub repo or demo link]",
   },
   {
-    title: "[PLACEHOLDER: GenAI Content Generator]",
-    problem: "Create personalized documentation and technical guides automatically",
-    tech: ["[PLACEHOLDER: React]", "[PLACEHOLDER: GPT-4]", "[PLACEHOLDER: Vector DBs]"],
-    outcome: "Generate 50+ documentation pages in minutes vs. hours",
-    link: "[PLACEHOLDER: add demo link]",
+    title: "AI Onboarding Agent",
+    description: "Intelligent agent that maps a user's pricing structure into Chargebee, automating the onboarding workflow.",
+    highlights: [
+      "Cut onboarding friction time by 80%",
+      "Maps pricing structures automatically from user input",
+      "Reduced support dependency through self-service capabilities",
+    ],
+    tech: ["AI Agents", "MCP Tooling", "SaaS Integration"],
+    link: "[PLACEHOLDER: add link if shareable]",
   },
   {
-    title: "[PLACEHOLDER: Intelligent Knowledge Base Chatbot]",
-    problem: "Enable employees to quickly find answers from company documentation",
-    tech: ["[PLACEHOLDER: Node.js]", "[PLACEHOLDER: Claude API]", "[PLACEHOLDER: Elasticsearch]"],
-    outcome: "Reduce support ticket volume by 30% through self-service",
-    link: "[PLACEHOLDER: add GitHub repo link]",
+    title: "MCP Configuration Tooling",
+    description: "MCP-based tooling enabling AI agents to perform self-service customer configuration workflows.",
+    highlights: [
+      "Reduced support dependency by 50%",
+      "Enabled AI-driven configuration workflows",
+      "Self-service customer setup without human intervention",
+    ],
+    tech: ["MCP", "AI Agents", "Configuration Systems"],
+    link: "[PLACEHOLDER: add link if shareable]",
   },
 ]
 
-const otherProjects = [
+const workProjects = [
   {
-    title: "rmvAds",
-    description: "Avoid Spotify ads for non-premium users by detecting ad breaks and auto-skipping via the Spotify API.",
-    tech: ["Python", "Spotify API"],
-    link: "[PLACEHOLDER: add GitHub repo link]",
+    title: "On-Demand Sandboxing Platform",
+    description: "Full lifecycle development of a sandboxing platform enabling scalable deployments and flexible pricing.",
+    highlights: [
+      "Servicing 500+ unique users monthly",
+      "Scalable deployment architecture",
+      "Flexible pricing model support",
+    ],
+    tech: ["Cloud-Native", "SaaS", "Platform Engineering"],
+    link: "[PLACEHOLDER: add link if shareable]",
   },
   {
-    title: "OCR Scanner",
-    description: "Real-time optical character recognition that scans video/image streams and alerts when target text is detected.",
-    tech: ["Python", "Google Cloud Vision"],
-    link: "[PLACEHOLDER: add demo link]",
+    title: "Performance Testing Framework",
+    description: "Automated performance testing framework that eliminated manual QA bottlenecks.",
+    highlights: [
+      "Lowered manual QA effort by 75%",
+      "Cut test cycle times by 40%",
+      "Integrated into CI/CD pipelines for continuous validation",
+    ],
+    tech: ["AWS Lambda", "Python", "Vue.js", "CI/CD"],
+    link: "[PLACEHOLDER: add link if shareable]",
   },
   {
-    title: "Schedule Bot",
-    description: "Telegram bot that fetches daily schedules from a database and sends them to users on demand.",
-    tech: ["Python", "GraphQL", "Telegram API"],
-    link: "[PLACEHOLDER: add GitHub repo link]",
+    title: "Dynamic Email Blacklist",
+    description: "Jurisdiction-specific email delivery feature for regulated markets.",
+    highlights: [
+      "Supports jurisdiction-specific compliance requirements",
+      "Reduced policy breaches",
+      "Dynamic rule engine for regulatory adaptation",
+    ],
+    tech: ["Compliance", "Rule Engine", "Email Systems"],
+    link: "[PLACEHOLDER: add link if shareable]",
   },
 ]
 
@@ -103,48 +130,51 @@ export default function ProjectsPage() {
           <h1>Projects</h1>
         </div>
 
-        {/* Featured: AI/GenAI Projects */}
+        {/* Featured: AI/Agent Projects */}
         <div className="pipeline-divider">
           <span className="pipeline-divider-label">Featured</span>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginBottom: "var(--space-2xl)" }}>
-          {aiProjects.map((project, index) => (
+          {featuredProjects.map((project) => (
             <div
-              key={`ai-${index}`}
+              key={project.title}
               className="card card-featured"
               style={{ padding: "var(--space-lg)" }}
             >
               <div className="card-badge" style={{ marginBottom: "var(--space-sm)" }}>
-                AI / GenAI
+                AI / Agent
               </div>
               <h3 style={{ marginBottom: "var(--space-sm)" }}>{project.title}</h3>
               <p style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-md)" }}>
-                {project.problem}
+                {project.description}
               </p>
+              <ul style={{ paddingLeft: "1.2rem", marginBottom: "var(--space-md)" }}>
+                {project.highlights.map((h, i) => (
+                  <li key={i} style={{ color: "var(--color-text)", marginBottom: "var(--space-xs)" }}>
+                    {h}
+                  </li>
+                ))}
+              </ul>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem", marginBottom: "var(--space-md)" }}>
                 {project.tech.map((t) => (
                   <span className="skill-tag" key={t}>{t}</span>
                 ))}
               </div>
-              <p style={{ fontSize: "0.9rem", marginBottom: "var(--space-md)" }}>
-                <span style={{ color: "var(--color-text-muted)" }}>Impact:</span>{" "}
-                {project.outcome}
-              </p>
               <ProjectLink link={project.link} />
             </div>
           ))}
         </div>
 
-        {/* Other Projects */}
+        {/* Work Projects */}
         <div className="pipeline-divider">
-          <span className="pipeline-divider-label">Other</span>
+          <span className="pipeline-divider-label">Work</span>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-md)" }}>
-          {otherProjects.map((project, index) => (
+          {workProjects.map((project) => (
             <div
-              key={`other-${index}`}
+              key={project.title}
               className="card card-pipeline"
               style={{ padding: "var(--space-lg)" }}
             >
@@ -152,6 +182,13 @@ export default function ProjectsPage() {
               <p style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-md)" }}>
                 {project.description}
               </p>
+              <ul style={{ paddingLeft: "1.2rem", marginBottom: "var(--space-md)" }}>
+                {project.highlights.map((h, i) => (
+                  <li key={i} style={{ color: "var(--color-text)", marginBottom: "var(--space-xs)" }}>
+                    {h}
+                  </li>
+                ))}
+              </ul>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem", marginBottom: "var(--space-md)" }}>
                 {project.tech.map((t) => (
                   <span className="skill-tag" key={t}>{t}</span>

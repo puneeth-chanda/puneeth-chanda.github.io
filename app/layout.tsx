@@ -5,7 +5,7 @@ import NavBar from "@/components/NavBar"
 
 export const metadata: Metadata = {
   title: "Puneeth Chanda",
-  description: "Puneeth Chanda — Software Engineer at Chargebee building AI-powered onboarding tools, automation platforms, and intelligent agent solutions.",
+  description: "Software Engineer at Chargebee building AI agents, developer tooling, and automation infrastructure. 3+ years building scalable SaaS products and distributed systems.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
