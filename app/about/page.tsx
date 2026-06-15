@@ -2,9 +2,32 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "About Me - Puneeth Chanda",
-  description: "Hey there! My name is Puneeth Chanda, I'm a developer at Chargebee.",
+  title: "About — Puneeth Chanda",
+  description: "Software Engineer at Chargebee building AI-powered onboarding tools, automation platforms, and intelligent agent solutions.",
 }
+
+const skillCategories = [
+  {
+    name: "Languages",
+    skills: ["Java", "Python", "JavaScript", "TypeScript", "SQL"],
+  },
+  {
+    name: "Backend & Frameworks",
+    skills: ["Spring Boot", "Node.js", "Vue.js", "AWS Lambda", "AWS S3"],
+  },
+  {
+    name: "Cloud & DevOps",
+    skills: ["Kubernetes", "Docker", "CI/CD", "ELK Stack", "Splunk"],
+  },
+  {
+    name: "AI/LLM & Agent Tooling",
+    skills: ["[PLACEHOLDER: LangChain, OpenAI/Anthropic APIs, vector DBs]", "GenAI Agents", "NLP", "Automation"],
+  },
+  {
+    name: "Databases & Observability",
+    skills: ["MySQL", "PostgreSQL", "Redis", "Monitoring", "Logging"],
+  },
+]
 
 export default function AboutPage() {
   const startYear = 2022
@@ -12,83 +35,71 @@ export default function AboutPage() {
   const experience = currYear - startYear
 
   return (
-    <div className="container animate__animated animate__fadeIn" style={{ marginTop: 140 }}>
-      <div className="row">
-        <div className="col-md-6 text-start">
-          <h1 className="line-after">About Me</h1>
-          <h4 className="mt-4">Hey &#x1F44B;</h4>
-          <p>
-            I'm Puneeth Chanda, a Software Engineer at Chargebee building AI-powered onboarding agent tools, sandboxing platforms, and OAuth-based integrations. I specialize in crafting intelligent automation solutions that streamline workflows and enhance user experiences.
+    <div className="page">
+      <div className="page-container">
+        {/* Header */}
+        <div style={{ marginBottom: "var(--space-2xl)" }}>
+          <p
+            className="text-mono"
+            style={{
+              fontSize: "0.75rem",
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "var(--color-text-muted)",
+              marginBottom: "var(--space-sm)",
+            }}
+          >
+            &gt; about
           </p>
-          <p>
-            With <b>{experience}+ years of experience</b>, I focus on developing performance testing frameworks, CI/CD automation, and GenAI/LLM-powered applications. I'm passionate about creating tools that make complex systems more accessible and efficient.
-          </p>
-          <h4 className="mt-5">Tech Stacks</h4>
-          <p>Below are the technologies I work with daily:</p>
-          <div className="row animate__animated animate__fadeInUp">
-            <div className="col">
-              <h5>Languages</h5>
-              <ul style={{ listStyleType: "circle" }}>
-                <li>Java</li>
-                <li>Python</li>
-                <li>JavaScript / TypeScript</li>
-                <li>SQL (MySQL, PostgreSQL)</li>
-              </ul>
-            </div>
-            <div className="col">
-              <h5>Backend & Frameworks</h5>
-              <ul style={{ listStyleType: "circle" }}>
-                <li>Spring Boot</li>
-                <li>Node.js</li>
-                <li>Vue.js</li>
-                <li>AWS Services (Lambda, S3)</li>
-              </ul>
-            </div>
-          </div>
-          <div className="row animate__animated animate__fadeInUp mt-3">
-            <div className="col">
-              <h5>Cloud & DevOps</h5>
-              <ul style={{ listStyleType: "circle" }}>
-                <li>Kubernetes</li>
-                <li>Docker</li>
-                <li>CI/CD Pipelines</li>
-                <li>ELK Stack</li>
-                <li>Splunk</li>
-              </ul>
-            </div>
-            <div className="col">
-              <h5>Databases & Observability</h5>
-              <ul style={{ listStyleType: "circle" }}>
-                <li>MySQL</li>
-                <li>PostgreSQL</li>
-                <li>Redis</li>
-                <li>Monitoring & Logging</li>
-              </ul>
-            </div>
-          </div>
-          <div className="row animate__animated animate__fadeInUp mt-3">
-            <div className="col">
-              <h5>AI/LLM & Agent Tooling</h5>
-              <ul style={{ listStyleType: "circle" }}>
-                <li>[PLACEHOLDER: list specific LLM/agent tools or frameworks you've used or are learning, e.g. LangChain, OpenAI/Anthropic APIs, vector DBs]</li>
-                <li>GenAI-powered onboarding agents</li>
-                <li>Intelligent automation platforms</li>
-                <li>Natural language processing</li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-4">
-            <Link href="/resume" className="btn btn-primary btn-lg">
+          <h1>About Me</h1>
+        </div>
+
+        {/* Two-column layout */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 420px), 1fr))",
+          gap: "var(--space-2xl)",
+          alignItems: "start",
+        }}>
+          {/* Left: Bio */}
+          <div>
+            <p style={{ fontSize: "1.1rem", marginBottom: "var(--space-lg)" }}>
+              I&apos;m Puneeth Chanda, a Software Engineer at Chargebee building
+              AI-powered onboarding agent tools, sandboxing platforms, and
+              OAuth-based integrations.
+            </p>
+            <p style={{ marginBottom: "var(--space-lg)" }}>
+              With <strong>{experience}+ years of experience</strong>, I focus
+              on developing performance testing frameworks, CI/CD automation,
+              and GenAI/LLM-powered applications. I&apos;m passionate about
+              creating tools that make complex systems more accessible and
+              efficient.
+            </p>
+            <p style={{ marginBottom: "var(--space-xl)" }}>
+              My work sits at the intersection of developer tooling and
+              intelligent automation — building the systems that help other
+              engineers ship faster and with more confidence.
+            </p>
+            <Link href="/resume" className="btn btn-primary">
               View Full Resume
             </Link>
           </div>
-        </div>
-        <div className="col-md-6">
-          <img
-            src="/assets/working.png"
-            alt="Puneeth Chanda working at a desk with laptop"
-            className="abt-img"
-          />
+
+          {/* Right: Skills */}
+          <div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)" }}>
+              {skillCategories.map((category) => (
+                <div key={category.name}>
+                  <div className="skill-category">{category.name}</div>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
+                    {category.skills.map((skill) => (
+                      <span className="skill-tag" key={skill}>{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

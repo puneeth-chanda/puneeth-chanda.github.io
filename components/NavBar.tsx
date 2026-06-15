@@ -18,18 +18,18 @@ export default function NavBar() {
     { href: "/articles", label: "Articles" },
     { href: "/notes", label: "Notes" },
     { href: "/resume", label: "Resume" },
-    { href: "/contact", label: "Contact Me" },
+    { href: "/contact", label: "Contact" },
   ]
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
-      <div className="container-fluid">
-        <Link href="/" className="navbar-brand fw-bold">
-          &gt; PC.
+      <div className="container-fluid" style={{ maxWidth: "var(--max-width)", margin: "0 auto" }}>
+        <Link href="/" className="navbar-brand">
+          <span className="prompt">&gt;</span> PC.
         </Link>
 
         <button
-          className="navbar-toggler rounded-0"
+          className="navbar-toggler"
           type="button"
           onClick={() => setExpanded(!expanded)}
           aria-controls="nav-collapse"
@@ -40,7 +40,7 @@ export default function NavBar() {
         </button>
 
         <div className={`collapse navbar-collapse ${expanded ? "show" : ""}`} id="nav-collapse">
-          <ul className="navbar-nav ms-lg-5">
+          <ul className="navbar-nav ms-auto">
             {navLinks.map((link) => (
               <li className="nav-item" key={link.href}>
                 <Link
@@ -52,18 +52,14 @@ export default function NavBar() {
                 </Link>
               </li>
             ))}
-            <li className="nav-item ms-lg-3">
+            <li className="nav-item ms-lg-2">
               <button
-                className="nav-link nav-link-btn"
+                className="nav-link-btn"
                 onClick={toggle}
                 title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
                 aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
               >
-                {theme === "dark" ? (
-                  <FiSun size={20} className="text-warning" />
-                ) : (
-                  <FiMoon size={20} />
-                )}
+                {theme === "dark" ? <FiSun size={18} /> : <FiMoon size={18} />}
               </button>
             </li>
           </ul>

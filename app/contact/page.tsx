@@ -8,7 +8,7 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
 
   useEffect(() => {
-    document.title = "Contact - Puneeth Chanda"
+    document.title = "Contact — Puneeth Chanda"
   }, [])
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -18,7 +18,7 @@ export default function ContactPage() {
   async function sendMessage(e: React.FormEvent) {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     const data = new FormData()
     data.append("Name", formData.name)
     data.append("Email", formData.email)
@@ -28,21 +28,16 @@ export default function ContactPage() {
       const response = await fetch("https://formspree.io/f/mvodbwva", {
         method: "POST",
         body: data,
-        headers: { 
-          Accept: "application/json",
-        },
+        headers: { Accept: "application/json" },
       })
-      
+
       if (response.ok) {
         setShowAlert(true)
         setFormData({ name: "", email: "", message: "" })
       } else {
-        const errorData = await response.json()
-        console.error("Form submission error:", errorData)
         alert("Sending message failed. Please try again later or contact me directly.")
       }
-    } catch (error) {
-      console.error("Network error:", error)
+    } catch {
       alert("Network error. Please check your connection and try again.")
     } finally {
       setIsSubmitting(false)
@@ -50,81 +45,146 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="container page animate__animated animate__fadeIn" style={{ marginTop: 120 }}>
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <h1>Get in touch &#x1F48C;</h1>
-          <p className="text-start">
-            If you have any question or just want to say hi, I&apos;ll try my best to get back to
-            you.
+    <div className="page">
+      <div className="page-container" style={{ maxWidth: "640px" }}>
+        {/* Header */}
+        <div style={{ marginBottom: "var(--space-2xl)" }}>
+          <p
+            className="text-mono"
+            style={{
+              fontSize: "0.75rem",
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "var(--color-text-muted)",
+              marginBottom: "var(--space-sm)",
+            }}
+          >
+            &gt; contact
           </p>
+          <h1>Get in Touch</h1>
+          <p style={{ color: "var(--color-text-muted)", marginTop: "var(--space-sm)" }}>
+            Have a question or want to work together? I&apos;ll try my best to get back to you.
+          </p>
+        </div>
 
-          {showAlert && (
-            <div className="alert alert-success">
-              <strong>All done &#x1F389;</strong>
-              <br />
-              Thanks for reaching out {formData.name}, I&apos;ll reply as soon as I can.
-            </div>
-          )}
+        {showAlert && (
+          <div
+            className="card"
+            style={{
+              padding: "var(--space-lg)",
+              marginBottom: "var(--space-xl)",
+              borderLeft: "3px solid var(--color-teal)",
+            }}
+          >
+            <p style={{ fontWeight: 500, marginBottom: "var(--space-xs)" }}>
+              Message sent.
+            </p>
+            <p style={{ color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
+              Thanks for reaching out, {formData.name}. I&apos;ll reply as soon as I can.
+            </p>
+          </div>
+        )}
 
-          <form className="mb-5 text-start" onSubmit={sendMessage}>
-            <div className="mb-3">
-              <label htmlFor="name" className="form-label">
-                Your Name:
-              </label>
-              <input 
-                id="name" 
-                type="text" 
-                className="form-control" 
-                required 
-                onChange={handleChange}
-                disabled={isSubmitting}
-              />
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="email" className="form-label">
-                Your Email:
-              </label>
-              <input 
-                id="email" 
-                type="email" 
-                className="form-control" 
-                required 
-                onChange={handleChange}
-                disabled={isSubmitting}
-              />
-            </div>
-
-            <div className="mb-3">
-              <label htmlFor="message" className="form-label">
-                Your Message:
-              </label>
-              <textarea
-                id="message"
-                className="form-control"
-                rows={3}
-                placeholder="Hi Puneeth, I'd like to discuss a project opportunity..."
-                required
-                onChange={handleChange}
-                disabled={isSubmitting}
-              />
-            </div>
-
-            <button 
-              type="submit" 
-              className="btn btn-primary"
+        <form onSubmit={sendMessage}>
+          <div style={{ marginBottom: "var(--space-lg)" }}>
+            <label htmlFor="name" className="form-label">Name</label>
+            <input
+              id="name"
+              type="text"
+              className="form-control"
+              required
+              onChange={handleChange}
               disabled={isSubmitting}
+            />
+          </div>
+
+          <div style={{ marginBottom: "var(--space-lg)" }}>
+            <label htmlFor="email" className="form-label">Email</label>
+            <input
+              id="email"
+              type="email"
+              className="form-control"
+              required
+              onChange={handleChange}
+              disabled={isSubmitting}
+            />
+          </div>
+
+          <div style={{ marginBottom: "var(--space-lg)" }}>
+            <label htmlFor="message" className="form-label">Message</label>
+            <textarea
+              id="message"
+              className="form-control"
+              rows={4}
+              placeholder="Hi Puneeth, I'd like to discuss..."
+              required
+              onChange={handleChange}
+              disabled={isSubmitting}
+              style={{ resize: "vertical" }}
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="btn btn-primary"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Sending..." : "Send Message"}
+          </button>
+        </form>
+
+        {/* Alt contact */}
+        <div style={{ marginTop: "var(--space-2xl)" }}>
+          <p
+            className="text-mono"
+            style={{
+              fontSize: "0.75rem",
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              color: "var(--color-text-muted)",
+              marginBottom: "var(--space-md)",
+            }}
+          >
+            Or reach me directly
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-sm)" }}>
+            <a
+              href="mailto:chandapuneeth@gmail.com"
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.85rem",
+                color: "var(--color-signal)",
+                textDecoration: "none",
+              }}
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
-            </button>
-          </form>
-          
-          <div className="mt-4 p-3 bg-light rounded">
-            <p className="mb-2"><strong>Alternative ways to reach me:</strong></p>
-            <p className="mb-1">• Email: <a href="mailto:chandapuneeth@gmail.com">chandapuneeth@gmail.com</a></p>
-            <p className="mb-1">• LinkedIn: <a href="https://www.linkedin.com/in/puneeth-chanda-2001/" target="_blank" rel="noopener noreferrer">linkedin.com/in/puneeth-chanda-2001</a></p>
-            <p className="mb-0">• GitHub: <a href="https://github.com/puneeth2001" target="_blank" rel="noopener noreferrer">github.com/puneeth2001</a></p>
+              chandapuneeth@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/puneeth-chanda-2001/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.85rem",
+                color: "var(--color-signal)",
+                textDecoration: "none",
+              }}
+            >
+              linkedin.com/in/puneeth-chanda-2001
+            </a>
+            <a
+              href="https://github.com/puneeth2001"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontFamily: "var(--font-mono)",
+                fontSize: "0.85rem",
+                color: "var(--color-signal)",
+                textDecoration: "none",
+              }}
+            >
+              github.com/puneeth2001
+            </a>
           </div>
         </div>
       </div>
