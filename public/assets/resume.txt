@@ -1,0 +1,21 @@
+Puneeth Chanda
+Software Engineer
+Chargebee
+
+Professional Background:
+- Software Engineer at Chargebee (2022-present)
+- 3.5+ years of experience in software development
+- Specialized in AI-powered onboarding tools, automation platforms, and intelligent agent solutions
+
+Technical Skills:
+- Languages: Java, Python, JavaScript/TypeScript, SQL
+- Backend & Frameworks: Spring Boot, Node.js, Vue.js, AWS Services
+- Cloud & DevOps: Kubernetes, Docker, CI/CD Pipelines, ELK Stack, Splunk
+- AI/LLM & Agent Tooling: [PLACEHOLDER: list specific LLM/agent tools or frameworks you've used or are learning]
+
+Projects:
+- rmvAds: [PLACEHOLDER: add GitHub repo link]
+- OCR: [PLACEHOLDER: add demo link]
+- Schedule Bot: [PLACEHOLDER: add GitHub repo link]
+
+Contact: chandapuneeth@gmail.com
