@@ -22,7 +22,7 @@ export default function HomePage() {
             style={{
               fontSize: "0.8rem",
               textTransform: "uppercase",
-              letterSpacing: "0.12em",
+              letterSpacing: "0.08em",
               color: "var(--color-text-muted)",
               marginBottom: "var(--space-md)",
             }}
@@ -99,7 +99,7 @@ export default function HomePage() {
 
         {/* Social */}
         <div className="social-icons animate-fade-up delay-6">
-          <SocialLink to="https://github.com/puneeth2001" label="GitHub">
+          <SocialLink to="https://github.com/puneeth-chanda" label="GitHub">
             <FiGithub />
           </SocialLink>
           <SocialLink to="https://www.linkedin.com/in/puneeth-chanda-2001/" label="LinkedIn">

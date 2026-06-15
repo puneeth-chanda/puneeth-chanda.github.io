@@ -15,7 +15,6 @@ const featuredProjects = [
       "Delivers personalized remediation paths based on individual learning patterns",
     ],
     tech: ["AI/ML", "LLM Integration", "Adaptive Assessments"],
-    link: "[PLACEHOLDER: add GitHub repo or demo link]",
   },
   {
     title: "AI Onboarding Agent",
@@ -26,7 +25,6 @@ const featuredProjects = [
       "Reduced support dependency through self-service capabilities",
     ],
     tech: ["AI Agents", "MCP Tooling", "SaaS Integration"],
-    link: "[PLACEHOLDER: add link if shareable]",
   },
   {
     title: "MCP Configuration Tooling",
@@ -37,7 +35,6 @@ const featuredProjects = [
       "Self-service customer setup without human intervention",
     ],
     tech: ["MCP", "AI Agents", "Configuration Systems"],
-    link: "[PLACEHOLDER: add link if shareable]",
   },
 ]
 
@@ -51,7 +48,6 @@ const workProjects = [
       "Flexible pricing model support",
     ],
     tech: ["Cloud-Native", "SaaS", "Platform Engineering"],
-    link: "[PLACEHOLDER: add link if shareable]",
   },
   {
     title: "Performance Testing Framework",
@@ -62,7 +58,6 @@ const workProjects = [
       "Integrated into CI/CD pipelines for continuous validation",
     ],
     tech: ["AWS Lambda", "Python", "Vue.js", "CI/CD"],
-    link: "[PLACEHOLDER: add link if shareable]",
   },
   {
     title: "Dynamic Email Blacklist",
@@ -73,41 +68,8 @@ const workProjects = [
       "Dynamic rule engine for regulatory adaptation",
     ],
     tech: ["Compliance", "Rule Engine", "Email Systems"],
-    link: "[PLACEHOLDER: add link if shareable]",
   },
 ]
-
-function ProjectLink({ link }: { link: string }) {
-  if (link.includes("PLACEHOLDER")) {
-    return (
-      <span
-        className="text-mono"
-        style={{
-          fontSize: "0.75rem",
-          color: "var(--color-text-muted)",
-          opacity: 0.6,
-        }}
-      >
-        {link}
-      </span>
-    )
-  }
-  return (
-    <a
-      href={link}
-      className="text-mono"
-      style={{
-        fontSize: "0.75rem",
-        color: "var(--color-signal)",
-        textDecoration: "none",
-      }}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {link} &rarr;
-    </a>
-  )
-}
 
 export default function ProjectsPage() {
   return (
@@ -139,10 +101,10 @@ export default function ProjectsPage() {
           {featuredProjects.map((project) => (
             <div
               key={project.title}
-              className="card card-featured"
+              className="card animate-fade-up"
               style={{ padding: "var(--space-lg)" }}
             >
-              <div className="card-badge" style={{ marginBottom: "var(--space-sm)" }}>
+              <div className="skill-tag" style={{ marginBottom: "var(--space-sm)", color: "var(--color-teal)", borderColor: "var(--color-teal)" }}>
                 AI / Agent
               </div>
               <h3 style={{ marginBottom: "var(--space-sm)" }}>{project.title}</h3>
@@ -156,12 +118,11 @@ export default function ProjectsPage() {
                   </li>
                 ))}
               </ul>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem", marginBottom: "var(--space-md)" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
                 {project.tech.map((t) => (
                   <span className="skill-tag" key={t}>{t}</span>
                 ))}
               </div>
-              <ProjectLink link={project.link} />
             </div>
           ))}
         </div>
@@ -175,7 +136,7 @@ export default function ProjectsPage() {
           {workProjects.map((project) => (
             <div
               key={project.title}
-              className="card card-pipeline"
+              className="card animate-fade-up"
               style={{ padding: "var(--space-lg)" }}
             >
               <h3 style={{ marginBottom: "var(--space-sm)" }}>{project.title}</h3>
@@ -189,12 +150,11 @@ export default function ProjectsPage() {
                   </li>
                 ))}
               </ul>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem", marginBottom: "var(--space-md)" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
                 {project.tech.map((t) => (
                   <span className="skill-tag" key={t}>{t}</span>
                 ))}
               </div>
-              <ProjectLink link={project.link} />
             </div>
           ))}
         </div>

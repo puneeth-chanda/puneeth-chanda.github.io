@@ -1,10 +1,13 @@
 "use client"
 
+import type { Metadata } from "next"
 import { useEffect, useState } from "react"
 
 export default function ContactPage() {
   const [showAlert, setShowAlert] = useState(false)
+  const [submittedName, setSubmittedName] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [errorMessage, setErrorMessage] = useState("")
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
 
   useEffect(() => {
@@ -13,11 +16,13 @@ export default function ContactPage() {
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }))
+    setErrorMessage("")
   }
 
   async function sendMessage(e: React.FormEvent) {
     e.preventDefault()
     setIsSubmitting(true)
+    setErrorMessage("")
 
     const data = new FormData()
     data.append("Name", formData.name)
@@ -32,13 +37,14 @@ export default function ContactPage() {
       })
 
       if (response.ok) {
+        setSubmittedName(formData.name)
         setShowAlert(true)
         setFormData({ name: "", email: "", message: "" })
       } else {
-        alert("Sending message failed. Please try again later or contact me directly.")
+        setErrorMessage("Sending message failed. Please try again later or contact me directly.")
       }
     } catch {
-      alert("Network error. Please check your connection and try again.")
+      setErrorMessage("Network error. Please check your connection and try again.")
     } finally {
       setIsSubmitting(false)
     }
@@ -69,18 +75,36 @@ export default function ContactPage() {
 
         {showAlert && (
           <div
-            className="card"
+            className="card animate-fade-in"
             style={{
               padding: "var(--space-lg)",
               marginBottom: "var(--space-xl)",
-              borderLeft: "3px solid var(--color-teal)",
+              borderColor: "var(--color-teal)",
             }}
           >
             <p style={{ fontWeight: 500, marginBottom: "var(--space-xs)" }}>
               Message sent.
             </p>
             <p style={{ color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
-              Thanks for reaching out, {formData.name}. I&apos;ll reply as soon as I can.
+              Thanks for reaching out{submittedName ? `, ${submittedName}` : ""}. I&apos;ll reply as soon as I can.
+            </p>
+          </div>
+        )}
+
+        {errorMessage && (
+          <div
+            className="card animate-fade-in"
+            style={{
+              padding: "var(--space-lg)",
+              marginBottom: "var(--space-xl)",
+              borderColor: "#DC2626",
+            }}
+          >
+            <p style={{ color: "var(--color-text)", fontWeight: 500, marginBottom: "var(--space-xs)" }}>
+              Something went wrong
+            </p>
+            <p style={{ color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
+              {errorMessage}
             </p>
           </div>
         )}
@@ -93,6 +117,7 @@ export default function ContactPage() {
               type="text"
               className="form-control"
               required
+              value={formData.name}
               onChange={handleChange}
               disabled={isSubmitting}
             />
@@ -105,6 +130,7 @@ export default function ContactPage() {
               type="email"
               className="form-control"
               required
+              value={formData.email}
               onChange={handleChange}
               disabled={isSubmitting}
             />
@@ -118,6 +144,7 @@ export default function ContactPage() {
               rows={4}
               placeholder="Hi Puneeth, I'd like to discuss..."
               required
+              value={formData.message}
               onChange={handleChange}
               disabled={isSubmitting}
               style={{ resize: "vertical" }}
@@ -150,8 +177,8 @@ export default function ContactPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-sm)" }}>
             <a
               href="mailto:chandapuneeth@gmail.com"
+              className="text-mono"
               style={{
-                fontFamily: "var(--font-mono)",
                 fontSize: "0.85rem",
                 color: "var(--color-signal)",
                 textDecoration: "none",
@@ -163,8 +190,8 @@ export default function ContactPage() {
               href="https://www.linkedin.com/in/puneeth-chanda-2001/"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-mono"
               style={{
-                fontFamily: "var(--font-mono)",
                 fontSize: "0.85rem",
                 color: "var(--color-signal)",
                 textDecoration: "none",
@@ -173,17 +200,17 @@ export default function ContactPage() {
               linkedin.com/in/puneeth-chanda-2001
             </a>
             <a
-              href="https://github.com/puneeth2001"
+              href="https://github.com/puneeth-chanda"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-mono"
               style={{
-                fontFamily: "var(--font-mono)",
                 fontSize: "0.85rem",
                 color: "var(--color-signal)",
                 textDecoration: "none",
               }}
             >
-              github.com/puneeth2001
+              github.com/puneeth-chanda
             </a>
           </div>
         </div>

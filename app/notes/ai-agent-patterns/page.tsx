@@ -1,55 +1,56 @@
 "use client"
 
 import { useEffect } from "react"
+import Link from "next/link"
 
 export default function AIAgentPatternsPage() {
   useEffect(() => {
-    document.title = "AI Agent Patterns - Puneeth Chanda"
+    document.title = "AI Agent Patterns — Puneeth Chanda"
   }, [])
 
   return (
-    <div className="container page animate__animated animate__fadeIn" style={{ marginTop: 120 }}>
-      <nav aria-label="breadcrumb" className="mb-4">
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item"><a href="/notes">Notes</a></li>
-          <li className="breadcrumb-item active">AI Agent Patterns</li>
-        </ol>
-      </nav>
+    <div className="page">
+      <div className="page-container" style={{ maxWidth: "720px" }}>
+        {/* Breadcrumb */}
+        <nav aria-label="breadcrumb" style={{ marginBottom: "var(--space-xl)" }}>
+          <ol style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", gap: "var(--space-sm)", alignItems: "center" }}>
+            <li>
+              <Link
+                href="/notes"
+                className="text-mono"
+                style={{ fontSize: "0.8rem", color: "var(--color-signal)", textDecoration: "none" }}
+              >
+                notes
+              </Link>
+            </li>
+            <li className="text-mono" style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>/</li>
+            <li className="text-mono" style={{ fontSize: "0.8rem", color: "var(--color-text-muted)" }}>ai-agent-patterns</li>
+          </ol>
+        </nav>
 
-      <article>
-        <h1>Building Production-Ready AI Agent Patterns</h1>
-        <p className="text-muted mb-4">
-          Published: [PLACEHOLDER: add date]
-        </p>
-
-        <section className="mb-5">
-          <h2>Agent Architecture Patterns</h2>
-          <p>
-            [PLACEHOLDER: Overview of different AI agent architectures, including singleton agents, multi-agent systems, and agent orchestration patterns]
+        <article>
+          <h1 style={{ marginBottom: "var(--space-md)" }}>Building Production-Ready AI Agent Patterns</h1>
+          <p className="text-mono" style={{ fontSize: "0.8rem", color: "var(--color-text-muted)", marginBottom: "var(--space-2xl)" }}>
+            Coming soon — notes on agent architectures, tool integration, and deployment patterns.
           </p>
-        </section>
 
-        <section className="mb-5">
-          <h2>Tool Integration Patterns</h2>
-          <p>
-            [PLACEHOLDER: How to design agents that can effectively use external tools and APIs, including error handling and retry mechanisms]
-          </p>
-        </section>
-
-        <section className="mb-5">
-          <h2>Memory and State Management</h2>
-          <p>
-            [PLACEHOLDER: Techniques for maintaining agent state, conversation memory, and learning from interactions]
-          </p>
-        </section>
-
-        <section className="mb-5">
-          <h2>Production Considerations</h2>
-          <p>
-            [PLACEHOLDER: Scaling AI agents, monitoring, cost optimization, and real-world deployment challenges I've encountered]
-          </p>
-        </section>
-      </article>
+          <div
+            className="card"
+            style={{
+              padding: "var(--space-xl)",
+              textAlign: "center",
+              borderColor: "var(--color-border)",
+            }}
+          >
+            <p style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-lg)" }}>
+              This note is a work in progress. Check back soon for detailed content on AI agent architectures, tool integration, memory management, and production considerations.
+            </p>
+            <Link href="/notes" className="btn btn-outline-primary">
+              Back to Notes
+            </Link>
+          </div>
+        </article>
+      </div>
     </div>
   )
 }

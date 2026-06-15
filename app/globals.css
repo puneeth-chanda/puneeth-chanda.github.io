@@ -99,6 +99,12 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* Interactive cards (links styled as cards) */
+a.card:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
 /* ============================================
    TYPOGRAPHY
    ============================================ */
@@ -173,11 +179,7 @@ code, .mono {
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231A1A1A' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-}
-
-[data-bs-theme="dark"] .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ECECEC' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='var(--color-text)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 .nav-link-btn {
@@ -211,14 +213,9 @@ code, .mono {
 }
 
 .btn-primary:hover {
-  background-color: #1D4ED8;
-  border-color: #1D4ED8;
+  background-color: color-mix(in srgb, var(--color-signal) 85%, black);
+  border-color: color-mix(in srgb, var(--color-signal) 85%, black);
   transform: translateY(-1px);
-}
-
-[data-bs-theme="dark"] .btn-primary:hover {
-  background-color: #93C5FD;
-  border-color: #93C5FD;
 }
 
 .btn-outline-primary {
@@ -346,27 +343,17 @@ code, .mono {
   background-color: var(--color-card-bg);
 }
 
-/* Featured card variant */
+/* Card variants */
 .card-featured {
-  border-left: 3px solid var(--color-teal);
+  border-color: var(--color-teal);
 }
 
-.card-featured .card-badge {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-teal);
-  font-weight: 500;
-}
-
-/* Standard card with pipeline accent */
 .card-pipeline {
-  border-left: 3px solid var(--color-border);
+  border-color: var(--color-border);
 }
 
 .card-pipeline:hover {
-  border-left-color: var(--color-signal);
+  border-color: var(--color-signal);
 }
 
 /* ============================================
@@ -465,7 +452,15 @@ code, .mono {
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .animate-dot,
+  .animate-fade-up,
+  .animate-fade-in {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 

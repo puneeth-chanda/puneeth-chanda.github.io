@@ -143,18 +143,9 @@ export default function ResumePage() {
             href="/resume.pdf"
             download
             className="btn btn-primary"
-            onClick={(e) => {
-              if (!document.getElementById("resume-pdf")) {
-                e.preventDefault()
-                alert("Resume PDF not found. Please add it to public/resume.pdf")
-              }
-            }}
           >
             Download PDF
           </a>
-          <p className="text-mono" style={{ fontSize: "0.7rem", color: "var(--color-text-muted)", marginTop: "var(--space-sm)" }}>
-            public/resume.pdf
-          </p>
         </div>
       </div>
     </div>
