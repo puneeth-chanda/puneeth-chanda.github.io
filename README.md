@@ -1,9 +1,57 @@
-# Personal Portfolio 👨
+# Puneeth Chanda — Personal Portfolio
 
-## Next Steps
+A minimal, fast personal portfolio built with **Next.js**, **TypeScript**, and **Bootstrap**. Deployed to GitHub Pages.
 
-1. **Add Resume PDF**: Place your resume PDF in the `public/assets/` directory as `resume.pdf`
-2. **Configure Formspree**: Set up Formspree for the contact form (https://formspree.io)
-3. **Add Project Links**: Fill in the [PLACEHOLDER] links for projects and AI projects
-4. **Complete Tech Stack**: Fill in the [PLACEHOLDER] for AI/LLM tools in the About page
+## Tech Stack
 
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Bootstrap 5 + Custom CSS
+- **Icons**: React Icons
+- **Deployment**: GitHub Pages (static export)
+
+## Project Structure
+
+```
+app/
+  ├── page.tsx           # Home page with hero + pipeline
+  ├── about/             # About page + skills
+  ├── projects/          # Projects showcase
+  ├── resume/            # Resume timeline + download
+  ├── contact/           # Contact form
+  ├── articles/          # Dev.to articles (hidden from nav)
+  ├── notes/             # Technical notes (hidden from nav)
+  └── layout.tsx         # Root layout + metadata
+
+components/
+  ├── NavBar.tsx         # Navigation + dark mode toggle
+  └── SocialLink.tsx     # Social media link component
+
+context/
+  └── ThemeContext.tsx   # Dark/light mode context
+
+public/
+  ├── resume.pdf         # Downloadable resume
+  └── assets/            # Images and other assets
+```
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run dev server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Deployment
+
+The site auto-deploys to GitHub Pages via GitHub Actions on every push to `master`.
+
+## License
+
+MIT
