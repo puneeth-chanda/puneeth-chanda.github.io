@@ -5,10 +5,9 @@ import SocialLink from "@/components/SocialLink"
 import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi"
 
 const pipelineSteps = [
-  { label: "Agents", color: "active" },
-  { label: "Platforms", color: "teal" },
-  { label: "Automation", color: "active" },
-  { label: "Infra", color: "" },
+  { label: "AI Engineering", color: "active" },
+  { label: "Platform Engineering", color: "teal" },
+  { label: "Automation", color: "" },
 ]
 
 export default function HomePage() {
@@ -57,22 +56,17 @@ export default function HomePage() {
         <div className="pipeline animate-fade-up delay-4">
           <div className="pipeline-step">
             <div className="pipeline-dot active animate-dot delay-2" />
-            <span className="pipeline-label">Agents</span>
+            <span className="pipeline-label">AI Engineering</span>
           </div>
           <div className="pipeline-line" />
           <div className="pipeline-step">
             <div className="pipeline-dot teal animate-dot delay-3" />
-            <span className="pipeline-label">Platforms</span>
+            <span className="pipeline-label">Platform Engineering</span>
           </div>
           <div className="pipeline-line" />
           <div className="pipeline-step">
-            <div className="pipeline-dot active animate-dot delay-4" />
+            <div className="pipeline-dot animate-dot delay-4" />
             <span className="pipeline-label">Automation</span>
-          </div>
-          <div className="pipeline-line" />
-          <div className="pipeline-step">
-            <div className="pipeline-dot animate-dot delay-5" />
-            <span className="pipeline-label">Infra</span>
           </div>
         </div>
 
