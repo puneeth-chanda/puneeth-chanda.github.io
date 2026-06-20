@@ -32,7 +32,7 @@ export default function HomePage() {
           </div>
 
           <h1 className="hero-title">
-            Engineer, designer, builder of small useful things.
+            Engineer, designer, builder of useful things.
           </h1>
 
           <p className="hero-sub">
