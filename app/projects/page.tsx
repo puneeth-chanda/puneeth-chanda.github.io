@@ -5,17 +5,18 @@ export const metadata: Metadata = {
   description: "View Puneeth Chanda's projects including AI/GenAI agents, developer tools, and automation platforms.",
 }
 
-const featuredProjects = [
-  {
-    title: "Klaro",
-    description: "AI-powered educational platform that analyzes incorrect student responses, identifies underlying conceptual gaps, and generates personalized learning paths.",
-    highlights: [
-      "Built concept dependency graph for prerequisite analysis and root-cause identification of learning deficiencies",
-      "Integrated LLM-based feedback generation, adaptive assessments, and mastery tracking",
-      "Delivers personalized remediation paths based on individual learning patterns",
-    ],
-    tech: ["AI/ML", "LLM Integration", "Adaptive Assessments"],
-  },
+const heroProject = {
+  title: "Klaro",
+  description: "AI-powered educational platform that analyzes incorrect student responses, identifies underlying conceptual gaps, and generates personalized learning paths.",
+  highlights: [
+    "Built concept dependency graph for prerequisite analysis and root-cause identification of learning deficiencies",
+    "Integrated LLM-based feedback generation, adaptive assessments, and mastery tracking",
+    "Delivers personalized remediation paths based on individual learning patterns",
+  ],
+  tech: ["AI/ML", "LLM Integration", "Adaptive Assessments"],
+}
+
+const otherProjects = [
   {
     title: "AI Onboarding Agent",
     description: "Intelligent agent that maps a user's pricing structure into Chargebee, automating the onboarding workflow.",
@@ -36,9 +37,6 @@ const featuredProjects = [
     ],
     tech: ["MCP", "AI Agents", "Configuration Systems"],
   },
-]
-
-const workProjects = [
   {
     title: "On-Demand Sandboxing Platform",
     description: "Full lifecycle development of a sandboxing platform enabling scalable deployments and flexible pricing.",
@@ -71,91 +69,59 @@ const workProjects = [
   },
 ]
 
+function ProjectCard({ project, hero }: { project: typeof heroProject; hero?: boolean }) {
+  if (hero) {
+    return (
+      <article className="card project-hero">
+        <span className="project-tag">Featured</span>
+        <h2>{project.title}</h2>
+        <p className="project-desc">{project.description}</p>
+        <ul className="project-highlights">
+          {project.highlights.map((h, i) => (
+            <li key={i}>{h}</li>
+          ))}
+        </ul>
+        <div className="project-tech">
+          {project.tech.map((t) => (
+            <span className="skill-tag" key={t}>{t}</span>
+          ))}
+        </div>
+      </article>
+    )
+  }
+
+  return (
+    <article className="card project-card">
+      <h3>{project.title}</h3>
+      <p className="project-desc">{project.description}</p>
+      <ul className="project-highlights">
+        {project.highlights.map((h, i) => (
+          <li key={i}>{h}</li>
+        ))}
+      </ul>
+      <div className="project-tech">
+        {project.tech.map((t) => (
+          <span className="skill-tag" key={t}>{t}</span>
+        ))}
+      </div>
+    </article>
+  )
+}
+
 export default function ProjectsPage() {
   return (
     <div className="page">
       <div className="page-container">
-        {/* Header */}
         <div style={{ marginBottom: "var(--space-2xl)" }}>
-          <p
-            className="text-mono"
-            style={{
-              fontSize: "0.75rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "var(--color-text-muted)",
-              marginBottom: "var(--space-sm)",
-            }}
-          >
-            &gt; projects
-          </p>
+          <p className="page-kicker">&gt; projects</p>
           <h1>Projects</h1>
         </div>
 
-        {/* Featured: AI/Agent Projects */}
-        <div className="pipeline-divider">
-          <span className="pipeline-divider-label">Featured</span>
-        </div>
+        <ProjectCard project={heroProject} hero />
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-lg)", marginBottom: "var(--space-2xl)" }}>
-          {featuredProjects.map((project) => (
-            <div
-              key={project.title}
-              className="card animate-fade-up"
-              style={{ padding: "var(--space-lg)" }}
-            >
-              <div className="skill-tag" style={{ marginBottom: "var(--space-sm)", color: "var(--color-teal)", borderColor: "var(--color-teal)" }}>
-                AI / Agent
-              </div>
-              <h3 style={{ marginBottom: "var(--space-sm)" }}>{project.title}</h3>
-              <p style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-md)" }}>
-                {project.description}
-              </p>
-              <ul style={{ paddingLeft: "1.2rem", marginBottom: "var(--space-md)" }}>
-                {project.highlights.map((h, i) => (
-                  <li key={i} style={{ color: "var(--color-text)", marginBottom: "var(--space-xs)" }}>
-                    {h}
-                  </li>
-                ))}
-              </ul>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
-                {project.tech.map((t) => (
-                  <span className="skill-tag" key={t}>{t}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Work Projects */}
-        <div className="pipeline-divider">
-          <span className="pipeline-divider-label">Work</span>
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-md)" }}>
-          {workProjects.map((project) => (
-            <div
-              key={project.title}
-              className="card animate-fade-up"
-              style={{ padding: "var(--space-lg)" }}
-            >
-              <h3 style={{ marginBottom: "var(--space-sm)" }}>{project.title}</h3>
-              <p style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-md)" }}>
-                {project.description}
-              </p>
-              <ul style={{ paddingLeft: "1.2rem", marginBottom: "var(--space-md)" }}>
-                {project.highlights.map((h, i) => (
-                  <li key={i} style={{ color: "var(--color-text)", marginBottom: "var(--space-xs)" }}>
-                    {h}
-                  </li>
-                ))}
-              </ul>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
-                {project.tech.map((t) => (
-                  <span className="skill-tag" key={t}>{t}</span>
-                ))}
-              </div>
-            </div>
+        <div className="project-grid">
+          {otherProjects.map((project) => (
+            <ProjectCard project={project} key={project.title} />
           ))}
         </div>
       </div>
