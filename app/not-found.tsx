@@ -3,9 +3,9 @@ import Link from "next/link"
 export default function NotFound() {
   return (
     <div className="page">
-      <div className="page-container" style={{ textAlign: "center", paddingTop: "12vh", paddingBottom: "8vh" }}>
+      <div className="page-container" style={{ textAlign: "center", paddingTop: "var(--space-2xl)", paddingBottom: "var(--space-2xl)" }}>
         <p
-          className="text-mono"
+          className="page-kicker"
           style={{
             fontSize: "clamp(4rem, 10vw, 8rem)",
             fontWeight: 700,
@@ -17,7 +17,7 @@ export default function NotFound() {
           404
         </p>
         <h1 style={{ marginBottom: "var(--space-md)" }}>Page not found</h1>
-        <p style={{ color: "var(--color-text-muted)", marginBottom: "var(--space-xl)", maxWidth: 420, marginInline: "auto" }}>
+        <p className="page-subtitle" style={{ maxWidth: 420, marginInline: "auto" }}>
           The page you&apos;re looking for doesn&apos; exist or has been moved.
         </p>
         <Link href="/" className="btn btn-primary">

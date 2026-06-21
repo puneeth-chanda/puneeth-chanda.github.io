@@ -1,6 +1,5 @@
 "use client"
 
-import type { Metadata } from "next"
 import { useEffect, useState } from "react"
 
 export default function ContactPage() {
@@ -52,58 +51,33 @@ export default function ContactPage() {
 
   return (
     <div className="page">
-      <div className="page-container" style={{ maxWidth: "640px" }}>
+      <div className="page-container-narrow">
         {/* Header */}
         <div style={{ marginBottom: "var(--space-2xl)" }}>
-          <p
-            className="text-mono"
-            style={{
-              fontSize: "0.75rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "var(--color-text-muted)",
-              marginBottom: "var(--space-sm)",
-            }}
-          >
-            &gt; contact
-          </p>
+          <p className="page-kicker">&gt; contact</p>
           <h1>Get in Touch</h1>
-          <p style={{ color: "var(--color-text-muted)", marginTop: "var(--space-sm)" }}>
+          <p className="page-subtitle">
             Have a question or want to work together? I&apos;ll try my best to get back to you.
           </p>
         </div>
 
         {showAlert && (
-          <div
-            className="card animate-fade-in"
-            style={{
-              padding: "var(--space-lg)",
-              marginBottom: "var(--space-xl)",
-              borderColor: "var(--color-teal)",
-            }}
-          >
+          <div className="card card-success animate-fade-in" style={{ padding: "var(--space-lg)", marginBottom: "var(--space-xl)" }}>
             <p style={{ fontWeight: 500, marginBottom: "var(--space-xs)" }}>
               Message sent.
             </p>
-            <p style={{ color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
+            <p className="page-subtitle" style={{ fontSize: "0.9rem" }}>
               Thanks for reaching out{submittedName ? `, ${submittedName}` : ""}. I&apos;ll reply as soon as I can.
             </p>
           </div>
         )}
 
         {errorMessage && (
-          <div
-            className="card animate-fade-in"
-            style={{
-              padding: "var(--space-lg)",
-              marginBottom: "var(--space-xl)",
-              borderColor: "#DC2626",
-            }}
-          >
+          <div className="card card-error animate-fade-in" style={{ padding: "var(--space-lg)", marginBottom: "var(--space-xl)" }}>
             <p style={{ color: "var(--color-text)", fontWeight: 500, marginBottom: "var(--space-xs)" }}>
               Something went wrong
             </p>
-            <p style={{ color: "var(--color-text-muted)", fontSize: "0.9rem" }}>
+            <p className="page-subtitle" style={{ fontSize: "0.9rem" }}>
               {errorMessage}
             </p>
           </div>
@@ -162,56 +136,11 @@ export default function ContactPage() {
 
         {/* Alt contact */}
         <div style={{ marginTop: "var(--space-2xl)" }}>
-          <p
-            className="text-mono"
-            style={{
-              fontSize: "0.75rem",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "var(--color-text-muted)",
-              marginBottom: "var(--space-md)",
-            }}
-          >
-            Or reach me directly
-          </p>
+          <p className="section-label">Or reach me directly</p>
           <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-sm)" }}>
-            <a
-              href="mailto:chandapuneeth@gmail.com"
-              className="text-mono"
-              style={{
-                fontSize: "0.85rem",
-                color: "var(--color-signal)",
-                textDecoration: "none",
-              }}
-            >
-              chandapuneeth@gmail.com
-            </a>
-            <a
-              href="https://www.linkedin.com/in/puneeth-chanda-2001/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-mono"
-              style={{
-                fontSize: "0.85rem",
-                color: "var(--color-signal)",
-                textDecoration: "none",
-              }}
-            >
-              linkedin.com/in/puneeth-chanda-2001
-            </a>
-            <a
-              href="https://github.com/puneeth-chanda"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-mono"
-              style={{
-                fontSize: "0.85rem",
-                color: "var(--color-signal)",
-                textDecoration: "none",
-              }}
-            >
-              github.com/puneeth-chanda
-            </a>
+            <a href="mailto:chandapuneeth@gmail.com" className="contact-link">chandapuneeth@gmail.com</a>
+            <a href="https://www.linkedin.com/in/puneeth-chanda-2001/" target="_blank" rel="noopener noreferrer" className="contact-link">linkedin.com/in/puneeth-chanda-2001</a>
+            <a href="https://github.com/puneeth-chanda" target="_blank" rel="noopener noreferrer" className="contact-link">github.com/puneeth-chanda</a>
           </div>
         </div>
       </div>

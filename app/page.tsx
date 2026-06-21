@@ -1,20 +1,18 @@
-"use client"
-
 import Link from "next/link"
 
 const currentlyItems = [
   {
-    num: "01 — Building",
+    label: "Building",
     title: "Dev tooling for AI agents",
     body: "A graph-based memory layer for long-running coding sessions.",
   },
   {
-    num: "02 — Writing",
+    label: "Writing",
     title: "Notes on quiet interfaces",
     body: "A small newsletter about restraint, typography, and product craft.",
   },
   {
-    num: "03 — Reading",
+    label: "Reading",
     title: "The Design of Everyday Things",
     body: "Re-reading Don Norman. Affordances, signifiers, and feedback loops.",
   },
@@ -23,9 +21,9 @@ const currentlyItems = [
 export default function HomePage() {
   return (
     <div className="page">
-      <div className="page-container" style={{ paddingTop: "8vh", paddingBottom: "8vh" }}>
+      <div className="page-container" style={{ paddingTop: "var(--space-2xl)", paddingBottom: "var(--space-2xl)" }}>
         {/* Hero */}
-        <section className="hero animate-fade-up">
+        <section className="hero">
           <div className="hero-eyebrow">
             <span className="hero-eyebrow-dash" aria-hidden="true" />
             Portfolio · 2026
@@ -54,7 +52,7 @@ export default function HomePage() {
         </section>
 
         {/* Currently */}
-        <section className="currently animate-fade-up delay-3">
+        <section className="currently">
           <div className="currently-eyebrow">
             <span className="currently-eyebrow-label">Currently</span>
             <span className="currently-eyebrow-rule" aria-hidden="true" />
@@ -62,8 +60,8 @@ export default function HomePage() {
 
           <div className="currently-grid">
             {currentlyItems.map((item) => (
-              <article className="currently-card" key={item.num}>
-                <span className="currently-card-num">{item.num}</span>
+              <article className="currently-card" key={item.label}>
+                <span className="currently-card-label">{item.label}</span>
                 <span className="currently-card-title">{item.title}</span>
                 <span className="currently-card-body">{item.body}</span>
               </article>
