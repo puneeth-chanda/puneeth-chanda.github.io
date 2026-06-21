@@ -23,7 +23,8 @@ export default function NavBar() {
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid" style={{ maxWidth: "var(--max-width)", margin: "0 auto" }}>
         <Link href="/" className="navbar-brand">
-          <span className="prompt">&gt;</span> PC.
+          <span className="brand-dot" aria-hidden="true" />
+          puneeth chanda
         </Link>
 
         <button
@@ -38,7 +39,7 @@ export default function NavBar() {
         </button>
 
         <div className={`collapse navbar-collapse ${expanded ? "show" : ""}`} id="nav-collapse">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto align-items-lg-center">
             {navLinks.map((link) => (
               <li className="nav-item" key={link.href}>
                 <Link
@@ -50,6 +51,12 @@ export default function NavBar() {
                 </Link>
               </li>
             ))}
+            <li className="nav-item ms-lg-3 my-2 my-lg-0">
+              <span className="available-pill" aria-label="Currently available for work">
+                <span className="available-dot" aria-hidden="true" />
+                Available
+              </span>
+            </li>
             <li className="nav-item ms-lg-2">
               <button
                 className="nav-link-btn"
