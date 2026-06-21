@@ -13,8 +13,9 @@ const currentlyItems = [
   },
   {
     label: "Reading",
-    title: "The Design of Everyday Things",
-    body: "Re-reading Don Norman. Affordances, signifiers, and feedback loops.",
+    title: "Learning from Thinking",
+    body: "How to extract knowledge from model reasoning traces — a guide.",
+    href: "/notes/thinking-for-learning",
   },
 ]
 
@@ -59,13 +60,22 @@ export default function HomePage() {
           </div>
 
           <div className="currently-grid">
-            {currentlyItems.map((item) => (
-              <article className="currently-card" key={item.label}>
-                <span className="currently-card-label">{item.label}</span>
-                <span className="currently-card-title">{item.title}</span>
-                <span className="currently-card-body">{item.body}</span>
-              </article>
-            ))}
+            {currentlyItems.map((item) => {
+              const card = (
+                <article className="currently-card" key={item.label}>
+                  <span className="currently-card-label">{item.label}</span>
+                  <span className="currently-card-title">{item.title}</span>
+                  <span className="currently-card-body">{item.body}</span>
+                </article>
+              )
+              return item.href ? (
+                <Link href={item.href} key={item.label} style={{ textDecoration: "none", color: "inherit" }}>
+                  {card}
+                </Link>
+              ) : (
+                card
+              )
+            })}
           </div>
         </section>
       </div>

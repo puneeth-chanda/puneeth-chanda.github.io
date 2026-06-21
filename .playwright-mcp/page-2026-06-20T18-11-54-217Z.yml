@@ -1,0 +1,243 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - generic:
+        - generic [ref=e5]:
+          - generic [ref=e6]:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: puneeth chanda
+                  - generic:
+                    - generic: Work
+                    - generic: About
+                    - generic: Resume
+                    - generic: Contact
+                  - generic:
+                    - generic: Available
+                - generic:
+                  - generic:
+                    - generic: Portfolio · 2026
+                  - generic: Engineer, designer, builder of small useful things.
+                  - generic: I design and build software at the intersection of product, systems, and craft. Currently exploring AI tooling, developer experience, and quiet interfaces.
+                  - generic:
+                    - generic:
+                      - generic: View selected work
+                      - img
+                    - generic:
+                      - generic: Read résumé
+                - generic:
+                  - generic:
+                    - generic: Currently
+                  - generic:
+                    - generic:
+                      - generic: 01 — Building
+                      - generic: Dev tooling for AI agents
+                      - generic: A graph-based memory layer for long-running coding sessions.
+                    - generic:
+                      - generic: 02 — Writing
+                      - generic: Notes on quiet interfaces
+                      - generic: A small newsletter about restraint, typography, and product craft.
+                    - generic:
+                      - generic: 03 — Reading
+                      - generic: The Design of Everyday Things
+                      - generic: Re-reading Don Norman. Affordances, signifiers, and feedback loops.
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: PUNEETH.CHANDA
+                  - generic:
+                    - generic:
+                      - generic: "[01] /WORK"
+                    - generic:
+                      - generic: "[02] /ABOUT"
+                    - generic:
+                      - generic: "[03] /RESUME"
+                    - generic:
+                      - generic: "[04] /CONTACT"
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: // PORTFOLIO_v2026
+                    - generic: "FILE: 00_INDEX.HTML"
+                  - generic: ENGINEER. DESIGNER. BUILDER.
+                  - generic: "I ship software at the seam of product, systems, and craft. // currently: AI tooling, developer experience, quiet interfaces."
+                  - generic:
+                    - generic:
+                      - generic: ▶ RUN WORK.MD
+                    - generic:
+                      - generic: ⌘ RESUME.PDF
+                - generic:
+                  - generic:
+                    - generic: $ tail -f ./currently.log
+                    - generic: UPTIME 99.97%
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic: "[01] BUILDING"
+                      - generic: DEV_TOOLING FOR AI AGENTS
+                      - generic: → graph-based memory layer for long-running coding sessions.
+                    - generic:
+                      - generic:
+                        - generic: "[02] WRITING"
+                      - generic: NOTES ON QUIET UI
+                      - generic: "→ newsletter: restraint, type, and product craft."
+                    - generic:
+                      - generic:
+                        - generic: "[03] READING"
+                      - generic: THE DESIGN OF EVERYDAY THINGS
+                      - generic: → Don Norman. affordances, signifiers, feedback loops.
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Puneeth Chanda
+                    - generic: Vol. 06 · 2026
+                  - generic:
+                    - generic:
+                      - generic: Work
+                    - generic: About
+                    - generic: Résumé
+                    - generic: Contact
+                  - generic: Bengaluru · CET
+                - generic:
+                  - generic:
+                    - generic: The Portfolio, Issue 06
+                    - generic: A quiet practice of engineering, design, and craft.
+                  - generic:
+                    - generic: Editor's note
+                    - generic: I design and build software at the intersection of product, systems, and craft — favoring restraint, evidence, and small useful things over spectacle.
+                    - generic:
+                      - generic:
+                        - generic: Read the work →
+                      - generic: Download résumé
+                - generic:
+                  - generic:
+                    - generic: — Currently in progress
+                    - generic: Updated weekly
+                  - generic:
+                    - generic:
+                      - generic: No. 01 · Building
+                      - generic: Dev tooling for AI agents
+                      - generic: A graph-based memory layer for long-running coding sessions.
+                    - generic:
+                      - generic: No. 02 · Writing
+                      - generic: Notes on quiet interfaces
+                      - generic: A small newsletter about restraint, typography, and product craft.
+                    - generic:
+                      - generic: No. 03 · Reading
+                      - generic: Design of Everyday Things
+                      - generic: Re-reading Don Norman. Affordances, signifiers, feedback.
+                  - generic:
+                    - generic: — end of issue —
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: puneeth chanda
+                    - generic:
+                      - generic:
+                        - generic: Work
+                      - generic:
+                        - generic: About
+                      - generic:
+                        - generic: Resume
+                      - generic:
+                        - generic: Contact
+                    - generic:
+                      - generic: Open to work
+                  - generic:
+                    - generic:
+                      - generic: Portfolio · 2026
+                    - generic: Engineer, designer, builder of small things.
+                    - generic: Designing and shipping software at the intersection of product, systems, and craft. Currently exploring AI tooling, developer experience, and quiet interfaces.
+                    - generic:
+                      - generic:
+                        - generic: View selected work
+                        - img
+                      - generic:
+                        - generic: Read résumé
+                  - generic:
+                    - generic:
+                      - generic: Currently
+                    - generic:
+                      - generic:
+                        - generic: 01 — Building
+                        - generic: Dev tooling for AI agents
+                        - generic: Graph-based memory for long-running coding sessions.
+                      - generic:
+                        - generic: 02 — Writing
+                        - generic: Notes on quiet interfaces
+                        - generic: A small newsletter on restraint, type, and craft.
+                      - generic:
+                        - generic: 03 — Reading
+                        - generic: Design of Everyday Things
+                        - generic: Don Norman. Affordances, signifiers, feedback.
+          - generic:
+            - generic:
+              - generic: Puneeth
+              - generic:
+                - img
+        - generic [ref=e8]:
+          - generic [ref=e9]:
+            - generic [ref=e10]:
+              - generic [ref=e11]:
+                - button [ref=e12]:
+                  - img [ref=e13]
+                - generic [ref=e15]: Loading...
+              - button [ref=e16]:
+                - img [ref=e17]
+            - generic [ref=e19]:
+              - generic [ref=e20]:
+                - generic [ref=e22]:
+                  - img [ref=e24]
+                  - text: Pages
+                - generic [ref=e29]:
+                  - img [ref=e32]
+                  - generic [ref=e35]: Page 1
+                  - img [ref=e37]
+              - generic [ref=e44]:
+                - generic [ref=e45]:
+                  - img [ref=e47]
+                  - img [ref=e51]
+                  - generic [ref=e57]: 1 · Minimal
+                - generic [ref=e58]:
+                  - img [ref=e60]
+                  - img [ref=e64]
+                  - generic [ref=e70]: 2 · Brutalist
+                - generic [ref=e71]:
+                  - img [ref=e73]
+                  - img [ref=e77]
+                  - generic [ref=e83]: 3 · Editorial
+                - generic [ref=e84]:
+                  - img [ref=e86]
+                  - img [ref=e90]
+                  - generic [ref=e96]: 4 · Glassmorphism
+            - button "What’s new" [ref=e98]
+          - generic [ref=e100]:
+            - button "Move" [ref=e101]:
+              - img [ref=e102]
+            - button "Pan" [ref=e104]:
+              - img [ref=e105]
+            - button "Frame" [ref=e108]:
+              - img [ref=e109]
+            - button "Rectangle" [ref=e111]:
+              - img [ref=e112]
+            - button "Pen" [ref=e114]:
+              - img [ref=e115]
+            - button "Text" [ref=e117]:
+              - img [ref=e118]
+            - button "Create image" [ref=e121]:
+              - img [ref=e122]
+            - button "Create SVG" [ref=e124]:
+              - img [ref=e125]
+            - button "Shaders" [ref=e127]:
+              - img [ref=e128]
+  - generic [ref=e131]:
+    - paragraph [ref=e132]: Welcome to Paper! Create an account to edit, collaborate, and more.
+    - generic [ref=e133]:
+      - link "Log in" [ref=e134]:
+        - /url: https://api.paper.design/auth/sign-in?final_redirect_uri=https://app.paper.design/file/01KVK2WKGDETXMH00CHB7QEGNT/1-0
+      - link "Sign up" [ref=e135]:
+        - /url: https://api.paper.design/auth/sign-up?final_redirect_uri=https://app.paper.design/file/01KVK2WKGDETXMH00CHB7QEGNT/1-0
+  - img [ref=e136]
