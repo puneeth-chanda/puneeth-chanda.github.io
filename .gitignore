@@ -68,3 +68,11 @@ localhost_*.report.html
 
 # OpenCode skills lock
 skills-lock.json
+
+# Agent tooling artifacts
+.playwright-mcp/
+.impeccable/
+.opencode/
+report/
+DESIGN.md
+PRODUCT.md
