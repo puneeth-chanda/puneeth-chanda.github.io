@@ -25,6 +25,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `(function(){try{var t=localStorage.getItem("themeMode")||"light";document.documentElement.setAttribute("data-bs-theme",t)}catch(e){}})();`,
           }}
         />
+        {/* Cloudflare Web Analytics */}
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "94263fc1042644829242c013f3c62b5b"}'
+        />
+        {/* End Cloudflare Web Analytics */}
       </head>
       <body>
         <ThemeProvider>
