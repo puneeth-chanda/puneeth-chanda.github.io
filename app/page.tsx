@@ -2,16 +2,6 @@ import Link from "next/link"
 
 const currentlyItems = [
   {
-    label: "Building",
-    title: "Dev tooling for AI agents",
-    body: "A graph-based memory layer for long-running coding sessions.",
-  },
-  {
-    label: "Writing",
-    title: "Notes on quiet interfaces",
-    body: "A small newsletter about restraint, typography, and product craft.",
-  },
-  {
     label: "Reading",
     title: "Learning from Thinking",
     body: "How to extract knowledge from model reasoning traces — a guide.",

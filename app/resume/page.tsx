@@ -102,7 +102,7 @@ export default function ResumePage() {
             <div>
               <h3 className="skill-category">Databases</h3>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.3rem" }}>
-                {["MySQL", "PostgreSQL", "Redis"].map((s) => (
+                {["MySQL", "PostgreSQL"].map((s) => (
                   <span className="skill-tag" key={s}>{s}</span>
                 ))}
               </div>
