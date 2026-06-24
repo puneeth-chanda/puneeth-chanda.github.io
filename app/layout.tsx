@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `(function(){try{var t=localStorage.getItem("themeMode")||"light";document.documentElement.setAttribute("data-bs-theme",t)}catch(e){}})();`,
           }}
         />
-        {/* Cloudflare Web Analytics */}
+        {/* Cloudflare Web Analytics — token is public by design (embedded in client-side HTML) */}
         <script
           defer
           src="https://static.cloudflareinsights.com/beacon.min.js"
